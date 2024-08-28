@@ -7,3 +7,11 @@
     class ItemBiblioteca:
     def __init__(self, titulo):
         self.titulo = titulo
+
+### Classe Livro
+      def __init__(self, titulo, autor, isbn):
+        super().__init__(titulo)
+        self.autor = autor
+        self.isbn = isbn
+
+### Classe Biblioteca
