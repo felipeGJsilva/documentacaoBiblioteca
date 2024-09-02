@@ -190,4 +190,21 @@
 
 * Descrição: Permite que o usuário adicione novos livros à biblioteca
 * Campos entrada: 
-    * Titulo: 
+    * Titulo: O titulo do livro.
+    * Autor: O autor do livro.
+    * ISBN: O número ISBN do livro.
+* Ações:
+    * Salvar: Salva o livro no sistema.
+    * Voltar: Retorna à tela principal.
+
+### Visualização de Livros
+
+* Descrição: Exibe a lista de todos os livros cadastrados na biblioteca.
+* Ações:
+    * Voltar: Retorna à tela principal.
+
+### Visualização de Usuarios
+
+* Descrição: Exibe a lista de todos os usuários cadastrados na biblioteca.
+* Ações:
+    * Voltar: Retorna à tela principal.
