@@ -208,3 +208,69 @@
 * Descrição: Exibe a lista de todos os usuários cadastrados na biblioteca.
 * Ações:
     * Voltar: Retorna à tela principal.
+
+## Estrutura da Interface Grafica 
+
+### Cadastramento de Livro
+
+     def cadastro_livro(self):
+        self.main_frame.pack_forget()
+        cadastro_livro_frame = tk.Frame(self.root)
+        cadastro_livro_frame.pack()
+
+
+        
+        titulo_label = tk.Label(cadastro_livro_frame, text="Título:")
+        titulo_label.pack()
+        titulo_entry = tk.Entry(cadastro_livro_frame)
+        titulo_entry.pack()
+
+
+        autor_label = tk.Label(cadastro_livro_frame, text="Autor:")
+        autor_label.pack()
+        autor_entry = tk.Entry(cadastro_livro_frame)
+        autor_entry.pack()
+
+
+        isbn_label = tk.Label(cadastro_livro_frame, text="ISBN:")
+        isbn_label.pack()
+        isbn_entry = tk.Entry(cadastro_livro_frame)
+        isbn_entry.pack()
+
+
+        def salvar_livro():
+            titulo = titulo_entry.get()
+            autor = autor_entry.get()
+            isbn = isbn_entry.get()
+            novo_livro = Livro(titulo, autor, isbn)
+            self.biblioteca.adicionar_livro(novo_livro)
+            cadastro_livro_frame.pack_forget()
+            self.main_frame.pack()
+
+
+        salvar_button = tk.Button(cadastro_livro_frame, text="Salvar", command=salvar_livro)
+        salvar_button.pack()
+
+
+        voltar_button = tk.Button(cadastro_livro_frame, text="Voltar", command=lambda: self.voltar(cadastro_livro_frame))
+        voltar_button.pack()
+
+### Cadastramento de Usuario 
+
+      def cadastro_usuario(self):
+        self.main_frame.pack_forget()
+        cadastro_usuario_frame = tk.Frame(self.root)
+        cadastro_usuario_frame.pack()
+
+
+        # Campos para cadastro de usuário
+        nome_label = tk.Label(cadastro_usuario_frame, text="Nome:")
+        nome_label.pack()
+        nome_entry = tk.Entry(cadastro_usuario_frame)
+        nome_entry.pack()
+
+
+        matricula_label = tk.Label(cadastro_usuario_frame, text="Matrícula:")
+        matricula_label.pack()
+        matricula_entry = tk.Entry(cadastro_usuario_frame)
+        matricula_entry.pack()
