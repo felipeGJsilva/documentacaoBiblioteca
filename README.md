@@ -1,5 +1,7 @@
 # Gerenciador de biblioteca 
+
     Este software funciona através da linguagem Python, o programa faz com que possa cadastrar um livro no qual é necessário informar o titulo, autor e isbn, cadastrar um usuario que será informado 
+
 ## Estrutura de Classes
 
 
@@ -27,7 +29,8 @@
 
 
     def adicionar_usuario(self, usuario):
-        self.usuarios.append(usuario)
+        self.usuarios.append(usuario)]
+
 ### Classe Gerenciador De Pedidos
 
       def __init__(self, biblioteca):
@@ -40,6 +43,7 @@
             self.pedidos.append((usuario, livro))
             return True
         return False
+
 ### Classe Biblioteca APP
 
      def __init__(self, root):
@@ -274,3 +278,36 @@
         matricula_label.pack()
         matricula_entry = tk.Entry(cadastro_usuario_frame)
         matricula_entry.pack()
+
+### Visualizar Livros
+
+     def visualizar_livros(self):
+        self.main_frame.pack_forget()
+        visualizar_livros_frame = tk.Frame(self.root)
+        visualizar_livros_frame.pack()
+
+
+        for livro in self.biblioteca.livros:
+            livro_label = tk.Label(visualizar_livros_frame, text=f"Título: {livro.titulo}, Autor: {livro.autor}, ISBN: {livro.isbn}")
+            livro_label.pack()
+
+
+        voltar_button = tk.Button(visualizar_livros_frame, text="Voltar", command=lambda: self.voltar(visualizar_livros_frame))
+        voltar_button.pack()
+
+### Visualizar Usuarios 
+
+     def visualizar_usuarios(self):
+        self.main_frame.pack_forget()
+        visualizar_usuarios_frame = tk.Frame(self.root)
+        visualizar_usuarios_frame.pack()
+
+
+        for usuario in self.biblioteca.usuarios:
+            usuario_label = tk.Label(visualizar_usuarios_frame, text=f"Nome: {usuario.titulo}, Matrícula: {usuario.matricula}")
+            usuario_label.pack()
+
+
+        voltar_button = tk.Button(visualizar_usuarios_frame, text="Voltar", command=lambda: self.voltar(visualizar_usuarios_frame))
+        voltar_button.pack()
+        
