@@ -310,4 +310,16 @@
 
         voltar_button = tk.Button(visualizar_usuarios_frame, text="Voltar", command=lambda: self.voltar(visualizar_usuarios_frame))
         voltar_button.pack()
-        
+    
+## Como usar
+
+* Inicialização: Executa o programa Python. A janela principal será aberta
+* Cadrasto de Livro: Clique no botão "Cadastrar  Livro", preencha os campos e clique em "Salvar"
+* Cadastro de Usuario: Clique no botão "Cadastrar  Usuario", preencha os campos e clique em "Salvar"
+* Visualizar Livros: Clique no botão "Visualizar Livros" para ver a lista de livros cadastrados
+* Visualizar Usuarios: Clique no botão "Visualizar Usuarios" para ver a lista de usuarios cadastrados
+
+## Requisitos do Sistema
+
+* Python 3
+* Módulo tkinter (geralmente incluido por padrão com instalações de Python)
